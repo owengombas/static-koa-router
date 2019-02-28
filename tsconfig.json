@@ -18,9 +18,6 @@
   },
   "exclude": [
     "node_modules",
-    "scripts",
-    "examples",
-    "docs",
     "tests"
   ]
 }
