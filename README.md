@@ -1,4 +1,5 @@
 # Serve static file with koa-router
+[![Build Status](https://travis-ci.org/OwenCalvin/koa-router-static.svg?branch=master)](https://travis-ci.org/OwenCalvin/koa-router-static)
 
 ## Installation
 ```
