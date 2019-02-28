@@ -1,5 +1,5 @@
 {
-  "name": "koa-router-static",
+  "name": "static-koa-router",
   "version": "1.0.0",
   "description": "Serve static file through koa-router",
   "main": "Serve.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/owencalvin/koa-router-static.git"
+    "url": "git+https://github.com/owencalvin/static-koa-router.git"
   },
   "keywords": [
     "router",
@@ -23,9 +23,9 @@
   "author": "Owen Calvin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/owencalvin/koa-router-static/issues"
+    "url": "https://github.com/owencalvin/static-koa-router/issues"
   },
-  "homepage": "https://github.com/owencalvin/koa-router-static#readme",
+  "homepage": "https://github.com/owencalvin/static-koa-router#readme",
   "dependencies": {
     "koa-send": "^5.0.0"
   },

@@ -3,10 +3,10 @@
 
 ## Installation
 ```
-npm i koa-router-static
+npm i static-koa-router
 ```
 ```
-yarn add koa-router-static
+yarn add static-koa-router
 ```
 
 ### Usage
@@ -29,31 +29,7 @@ You simply need to pass the **dir path** at first parameter, the **router instan
 import * as KoaRouter from "koa-router";
 import * as Http from "http";
 import * as Koa from "koa";
-import { Serve } from "koa-router-static";
-
-const app = new Koa();
-
-const router = new KoaRouter({
-  prefix: "/router"
-});
-
-Serve(`${__dirname}/public`, router);
-
-app.use(router.routes());
-
-const server = Http.createServer(app.callback());
-server.listen(1337, "localhost", () => {
-  console.log("Server started");
-});
-
-```
-
-##### Javascript
-```javascript
-const { Serve } = require('koa-router-static');
-const KoaRouter = require('koa-router')
-const Http = require('http');
-const Koa = require('koa');
+import { Serve } from "static-koa-router";
 
 const app = new Koa();
 
