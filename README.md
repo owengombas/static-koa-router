@@ -70,3 +70,9 @@ server.listen(1337, "localhost", () => {
 });
 
 ```
+
+### See also
+[koa-static](https://github.com/koajs/static)
+
+### License
+MIT
