@@ -1,0 +1,47 @@
+{
+  "name": "koa-router-static",
+  "version": "1.0.0",
+  "description": "Serve static file through koa-router",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config jest.config.json --detectOpenHandles --runInBand --forceExit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owencalvin/koa-router-static.git"
+  },
+  "keywords": [
+    "router",
+    "static",
+    "koa",
+    "file",
+    "serve",
+    "html",
+    "css"
+  ],
+  "author": "Owen Calvin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/owencalvin/koa-router-static/issues"
+  },
+  "homepage": "https://github.com/owencalvin/koa-router-static#readme",
+  "dependencies": {
+    "koa-send": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/jest": "^24.0.9",
+    "@types/koa": "^2.0.48",
+    "@types/koa-router": "^7.0.40",
+    "@types/koa-send": "^4.1.1",
+    "@types/node": "^11.9.5",
+    "axios": "^0.18.0",
+    "jest": "^24.1.0",
+    "koa": "^2.7.0",
+    "koa-router": "^7.4.0",
+    "ts-jest": "^24.0.0",
+    "ts-node": "^8.0.2",
+    "tslib": "^1.9.3",
+    "typescript": "^3.3.3333"
+  }
+}
