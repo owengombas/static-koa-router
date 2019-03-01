@@ -24,17 +24,18 @@ You simply need to pass the **dir path** at the first parameter, the **router in
  - [setHeaders](https://github.com/koajs/send#setheaders) Function to set custom headers on response.
 
 ### Examples
+
 ##### Typescript
 ```javascript
-import * as KoaRouter from "koa-router";
-import * as Http from "http";
-import * as Koa from "koa";
 import { Serve } from "static-koa-router";
+import * as KoaRouter from "koa-router";
+import * as Koa from "koa";
+import * as Http from "http";
 
 const app = new Koa();
 
 const router = new KoaRouter({
-  prefix: "/router"
+  prefix: "/public"
 });
 
 Serve(`${__dirname}/public`, router);
@@ -42,10 +43,10 @@ Serve(`${__dirname}/public`, router);
 app.use(router.routes());
 
 const server = Http.createServer(app.callback());
+
 server.listen(1337, "localhost", () => {
   console.log("Server started");
 });
-
 ```
 
 ##### Javascript
@@ -66,6 +67,7 @@ StaticKoaRouter.Serve(`${__dirname}/public`, router);
 app.use(router.routes());
 
 const server = Http.createServer(app.callback());
+
 server.listen(1337, "localhost", () => {
   console.log("Server started");
 });

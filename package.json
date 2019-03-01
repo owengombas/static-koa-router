@@ -1,6 +1,6 @@
 {
   "name": "static-koa-router",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Serve static file through koa-router",
   "main": "Serve.js",
   "types": "Serve.d.ts",
