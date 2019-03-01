@@ -1,4 +1,4 @@
-# Serve static file with koa-router
+# Serve static file through koa-router
 [![Build Status](https://travis-ci.org/OwenCalvin/static-koa-router.svg?branch=master)](https://travis-ci.org/OwenCalvin/static-koa-router)
 
 ## Installation
@@ -11,7 +11,7 @@ yarn add static-koa-router
 
 ### Usage
 `Serve(dirPath: string, router: Router, options?: Options)`
-You simply need to pass the **dir path** at first parameter, the **router instance** (koa-router) at the second parameter and optionaly the **options**.
+You simply need to pass the **dir path** at the first parameter, the **router instance** (koa-router) at the second parameter and optionaly the **options** at third parameter.
 
 ##### Options
  - `maxage` Browser cache max-age in milliseconds. defaults to 0
@@ -23,7 +23,7 @@ You simply need to pass the **dir path** at first parameter, the **router instan
  - `extensions` Try to match extensions from passed array to search for file when no extension is sufficed in URL. First found is served. (defaults to `false`)
  - [setHeaders](https://github.com/koajs/send#setheaders) Function to set custom headers on response.
 
-### Example
+### Examples
 ##### Typescript
 ```javascript
 import * as KoaRouter from "koa-router";
@@ -48,8 +48,33 @@ server.listen(1337, "localhost", () => {
 
 ```
 
+##### Javascript
+```javascript
+const StaticKoaRouter = require("static-koa-router");
+const KoaRouter = require("koa-router");
+const Koa = require("koa");
+const Http = require("http");
+
+const app = new Koa();
+
+const router = new KoaRouter({
+  prefix: "/public"
+});
+
+StaticKoaRouter.Serve(`${__dirname}/public`, router);
+
+app.use(router.routes());
+
+const server = Http.createServer(app.callback());
+server.listen(1337, "localhost", () => {
+  console.log("Server started");
+});
+```
+
 ### See also
-[koa-static](https://github.com/koajs/static)
+[koa-static](https://github.com/koajs/static)  
+[koa-send](https://github.com/koajs/send)  
+[koa-router](https://github.com/ZijianHe/koa-router)
 
 ### License
-MIT
+MIT - Owen Calvin
