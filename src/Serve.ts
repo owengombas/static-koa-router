@@ -1,7 +1,7 @@
 import * as KoaRouter from "koa-router";
 import * as Send from "koa-send";
 import * as Path from "path";
-import { IServeOptions, Router } from "./types";
+import { IServeOptions, Router, Without } from "./types";
 import { Context, Middleware } from "koa";
 
 function getCtxPath(koaRouter: KoaRouter, ctx: Context) {
@@ -17,7 +17,7 @@ export function Serve(dirPath: string, router: KoaRouter, options?: IServeOption
   const resolvedPath = Path.resolve(dirPath);
   const definedOptions = options || {};
   const sendOptions: Send.SendOptions = {
-    ...definedOptions,
+    ...(definedOptions as Without<IServeOptions, "defer">),
     index: definedOptions.index || "index.html",
     root: resolvedPath
   };
