@@ -51,7 +51,7 @@ server.listen(1337, "localhost", () => {
 
 ##### Javascript
 ```javascript
-const StaticKoaRouter = require("static-koa-router");
+const { Serve } = require("static-koa-router");
 const KoaRouter = require("koa-router");
 const Koa = require("koa");
 const Http = require("http");
@@ -62,7 +62,7 @@ const router = new KoaRouter({
   prefix: "/public"
 });
 
-StaticKoaRouter.Serve(`${__dirname}/public`, router);
+Serve(`${__dirname}/public`, router);
 
 app.use(router.routes());
 
