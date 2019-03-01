@@ -8,7 +8,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "declaration": true,
-    "importHelpers": true,
+    "importHelpers": false,
     "forceConsistentCasingInFileNames": true,
     "lib": [
       "es2016",
